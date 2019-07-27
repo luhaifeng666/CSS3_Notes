@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "name": "Notes",
+  "description": "学习笔记",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "vuepress": "^1.0.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luhaifeng666/CSS3_Notes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luhaifeng666/CSS3_Notes/issues"
+  },
+  "homepage": "https://github.com/luhaifeng666/CSS3_Notes#readme"
+}
