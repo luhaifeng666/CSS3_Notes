@@ -1,7 +1,6 @@
 module.exports = {
   title: '学习笔记',
   description: '每天进步一丢丢',
-  base: '/Notes/',
   markdown: {
     lineNumbers: true
   },
