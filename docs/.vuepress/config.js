@@ -7,13 +7,13 @@ module.exports = {
   },
   themeConfig: {
     lastUpdated: 'Last Updated',
-    sidebarDepth: 2,
+    sidebarDepth: 3,
     sidebar: 'auto',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'CSS3Note', link: '/views/CSS3Note/' },
       { text: 'JSNote', link: '/views/JSNote/' },
-      { text: 'OtherNote', link: '/views/OtherNote/' },
+      // { text: 'OtherNote', link: '/views/OtherNote/' },
       { text: 'GitHub', link: 'https://luhaifeng666.github.io/Notes/' }
     ],
     sidebar: {
@@ -26,7 +26,27 @@ module.exports = {
             'backgroundAndBorder/1-1/'
           ]
         },
-      ]
+      ],
+      '/views/JSNote/': [
+        '',
+        {
+          title: '201907',
+          collapsable: false,
+          children: [
+            '201907/10'
+          ]
+        }
+      ],
+      // '/views/OtherNote': [
+      //   '',
+      //   {
+      //     title: '201907',
+      //     collapsable: false,
+      //     children: [
+      //       '201907/10'
+      //     ]
+      //   }
+      // ]
     }
   }
 }
