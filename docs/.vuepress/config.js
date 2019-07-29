@@ -26,6 +26,7 @@ module.exports = {
           children: [
             'backgroundAndBorder/BAB-1',
             'backgroundAndBorder/BAB-2',
+            'backgroundAndBorder/BAB-3',
           ]
         },
       ],
