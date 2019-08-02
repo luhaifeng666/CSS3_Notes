@@ -38,7 +38,7 @@ box-shadow: 0 0 0 10px #67C23A, 0 0 0 20px #F56C6C, 0 0 0 30px #E6A23C;
 
 ::: tip 优点
 - 相比较于outline，这种方式可以设置多重边框；
-- 除了边框，box-shadow的偏移还能实现其他更多神奇的效果（后面会有一章介绍利用box-shaodw制作天气图标）。
+- 除了边框，box-shadow的偏移还能实现其他更多神奇的效果（[后面会有一章介绍利用box-shaodw制作天气图标](/views/CSS3Note/201907/15.html)）。
 :::
 
 ::: danger 缺点

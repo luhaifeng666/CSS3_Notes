@@ -29,6 +29,13 @@ module.exports = {
             'backgroundAndBorder/BAB-3',
           ]
         },
+        {
+          title: '201907归档',
+          collapsable: false,
+          children: [
+            '201907/15'
+          ]
+        }
       ],
       '/views/JSNote/': [
         '',
@@ -37,7 +44,8 @@ module.exports = {
           collapsable: false,
           children: [
             '201907/10',
-            '201907/11'
+            '201907/11',
+            '201907/12'
           ]
         }
       ],
