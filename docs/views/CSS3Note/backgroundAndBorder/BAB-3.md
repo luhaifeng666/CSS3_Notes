@@ -40,4 +40,11 @@ padding: 10px;
 background: url(../public/images/orange.jpeg) no-repeat top 10px left 10px / 30%;
 background-origin: content-box;
 ```
-此时，我们只需要修改padding一个值，就可以实现与[代码一](/views/CSS3Note/backgroundAndBorder/BAB-3.html#代码一)一样的效果了。
+此时，我们只需要修改padding一个值，就可以实现与[代码一](/views/CSS3Note/backgroundAndBorder/BAB-3.html#代码一)一样的效果了。<br>
+与之相仿，我们可以用[calc](https://developer.mozilla.org/zh-CN/docs/Web/CSS/calc)来实现定位。
+#### 代码三
+```css
+padding: 10px;
+background: url(../public/images/orange.jpeg) no-repeat calc(100% - 20px) calc(100% - 10px) / 30%;
+background-origin: content-box;
+```
