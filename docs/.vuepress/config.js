@@ -1,4 +1,53 @@
-module.exports = {
+const fs = require('fs')
+
+let getFiles = function(type) {
+  let baseUrl = type && `${type.split('/')[1]}/`
+  let urls = fs.readdirSync(`./docs/views/${type}`).map(item => {
+    return baseUrl + item
+  })
+  return urls
+}
+
+let sidebar = {}
+const pageConfig = [
+  {
+    name: '/views/CSS3Note/',
+    baseUrl: 'CSS3Note/',
+    pathes: ['', {
+      name: '背景与边框',
+      url: 'backgroundAndBorder'
+    }, {
+      name: '201907归档',
+      url: '201907'
+    }]
+  },
+  {
+    name: '/views/JSNote/',
+    baseUrl: 'JSNote/',
+    pathes: ['', {
+      name: '201907归档',
+      url: '201907'
+    }]
+  }
+]
+pageConfig.forEach(item => {
+  sidebar[item.name] = []
+  item.pathes.forEach(path => {
+    if(path) {
+      let children = getFiles(`${item.baseUrl}${path.url}`)
+      let conf = {
+        title: path.name,
+        collapsable: false,
+        children
+      }
+      sidebar[item.name].push(conf)
+    } else {
+      sidebar[item.name].push(path)
+    }
+  })
+})
+
+let config = {
   title: '学习笔记',
   description: '每天进步一丢丢',
   base: '/Notes/',
@@ -17,49 +66,8 @@ module.exports = {
       { text: 'GitHub', link: 'https://luhaifeng666.github.io/Notes/' },
       { text: 'LBUI', link: 'https://github.com/luhaifeng666/LBUI' }
     ],
-    sidebar: {
-      '/views/CSS3Note/': [
-        '',
-        {
-          title: '背景与边框',
-          collapsable: false,
-          children: [
-            'backgroundAndBorder/BAB-1',
-            'backgroundAndBorder/BAB-2',
-            'backgroundAndBorder/BAB-3',
-            'backgroundAndBorder/BAB-4',
-          ]
-        },
-        {
-          title: '201907归档',
-          collapsable: false,
-          children: [
-            '201907/15'
-          ]
-        }
-      ],
-      '/views/JSNote/': [
-        '',
-        {
-          title: '201907归档',
-          collapsable: false,
-          children: [
-            '201907/10',
-            '201907/11',
-            '201907/12'
-          ]
-        }
-      ],
-      // '/views/OtherNote': [
-      //   '',
-      //   {
-      //     title: '201907',
-      //     collapsable: false,
-      //     children: [
-      //       '201907/10'
-      //     ]
-      //   }
-      // ]
-    }
+    sidebar
   }
 }
+
+module.exports = config

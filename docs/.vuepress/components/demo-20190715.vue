@@ -46,7 +46,6 @@
   top: 30px;
   left: 30px;
   transform: rotate(10deg);
-  transform-origin: 50% 50%;
   box-shadow: 10px 10px 0 0 #fff, 20px 0px 0 0 #fff, 30px 10px 0 0 #fff, 0 15px 0 0 #fff, 10px 25px 0 #fff, 20px 15px 0 #fff, 30px 25px 0 #fff, 0 30px 0 0 #fff, 10px 40px 0 #fff, 20px 30px 0 #fff, 30px 40px 0 #fff;
   animation: rain 1s linear infinite;
 }
