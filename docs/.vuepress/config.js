@@ -1,13 +1,13 @@
 const fs = require('fs')
+const BASE_URL = './docs/views/'
 
 let getFiles = function(type) {
   let baseUrl = type && `${type.split('/')[1]}/`
-  let urls = fs.readdirSync(`./docs/views/${type}`).map(item => {
+  let urls = fs.readdirSync(`${BASE_URL}${type}`).map(item => {
     return baseUrl + item
   })
   return urls
 }
-
 let sidebar = {}
 const pageConfig = [
   {
@@ -27,6 +27,9 @@ const pageConfig = [
     pathes: ['', {
       name: '201907归档',
       url: '201907'
+    },{
+      name: 'Nodejs',
+      url: 'Nodejs'
     }]
   }
 ]
@@ -63,7 +66,7 @@ let config = {
       { text: 'CSS3Note', link: '/views/CSS3Note/' },
       { text: 'JSNote', link: '/views/JSNote/' },
       // { text: 'OtherNote', link: '/views/OtherNote/' },
-      { text: 'GitHub', link: 'https://luhaifeng666.github.io/Notes/' },
+      { text: 'GitHub', link: 'https://github.com/luhaifeng666/Notes' },
       { text: 'LBUI', link: 'https://github.com/luhaifeng666/LBUI' }
     ],
     sidebar
