@@ -59,7 +59,7 @@ let config = {
   },
   themeConfig: {
     lastUpdated: 'Last Updated',
-    sidebarDepth: 3,
+    sidebarDepth: 2,
     sidebar: 'auto',
     nav: [
       { text: 'Home', link: '/' },

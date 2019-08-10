@@ -29,3 +29,29 @@ description: 创建第一个服务
 </p>
 
 ### 创建第一个服务
+现在我们来尝试创建第一个服务。首先，我们在上一章节中创建的index.js中输入以下内容：
+```js
+var http = require('http');
+
+http.createServer(function(request, response) {
+  response.writeHead('200', {
+    'Content Type': 'text/plain'
+  });
+  response.write('Hello World');
+  response.end();
+}).listen('8080');
+```
+然后在控制台中输入：
+```js
+node index.js
+```
+这时候在浏览器中访问localhost:8080，可以发现页面中打印出了Hello World，至此，服务器就搭建完成了。484很简单？
+<p>现在我们逐行来解释下上面代码的含义。</p>
+::: tip
+- 第一行，引入Nodejs的http模块，这个是用来创建服务的；
+- 第三行，利用http的createServe方法创建服务，这个方法接受一个回调函数作为唯一参数，回调函数接受两个参数：request以及response，request用来接受请求参数，response用来响应强求；
+- 第四行，response.writeHead() 函数发送一个 HTTP状态200和HTTP头的内容类型(content-type)；
+- 第七行，response.write() 函数在 HTTP 相应主体中发送文本“Hello World"；
+- 第八行，response.end() 完成响应；
+- 最后一行，监听8080端口。
+:::
