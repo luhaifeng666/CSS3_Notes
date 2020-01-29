@@ -30,6 +30,12 @@ const pageConfig = [
     },{
       name: 'Nodejs',
       url: 'Nodejs'
+    },{
+      name: '数据结构与算法',
+      url: 'DataStructureAndAlgorithm'
+    },{
+      name: 'TypeScript',
+      url: 'TypeScript'
     }]
   }
 ]
