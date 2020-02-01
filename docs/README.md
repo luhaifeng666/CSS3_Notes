@@ -1,6 +1,6 @@
 ---
 home: true
-# heroImage: /images/luoxiaohei1.jpeg
+heroImage: /images/luoxiaohei1.jpeg
 features:
 - title: CSS3笔记
   details: 根据从论坛以及相关书籍上所学到的一些内容，规整出CSS3相关的笔记内容。

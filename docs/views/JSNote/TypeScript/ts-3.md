@@ -44,6 +44,34 @@ value[0][1];    // ERROR
 ```
 我们看到,这就是 `unknown` 与 `any` 的不同之处,虽然它们都可以是任何类型,但是当 `unknown` 类型被确定是某个类型之前,它不能被进行任何操作比如实例化、getter、函数执行等等。<br />所以在忍不住想用any的时候，尝试使用unknown替代它吧~
 
+:::tip Object
+你可能认为 Object有相似的作用，就像它在其它语言中那样。Object类型的变量只是允许你给它赋任意值 - 但是却不能够在它上面调用任意的方法，即便它真的有这些方法：
+```js
+let notSure: any = 4;
+notSure.ifItExists(); // okay, ifItExists might exist at runtime
+notSure.toFixed(); // okay, toFixed exists (but the compiler doesn't check)
+
+let prettySure: Object = 4;
+prettySure.toFixed(); // Error: Property 'toFixed' doesn't exist on type 'Object'.
+```
+:::
+
+
+#### object
+object表示非原始类型，也就是除number，string，boolean，symbol，null或undefined之外的类型。
+使用object类型，就可以更好的表示像Object.create这样的API。例如：
+```js
+declare function create(o: object | null): void;
+
+create({ prop: 0 }); // OK
+create(null); // OK
+
+create(42); // Error
+create("string"); // Error
+create(false); // Error
+create(undefined); // Error
+```
+
 #### never
 never 类型表示的是那些永不存在的值的类型，never 类型是任何类型的子类型，也可以赋值给任何类型；然而，没有类型是 never 的子类型或可以赋值给 never 类型（除了never本身之外）。即便是any大法也不行！<br />never的使用场景也不是特别普遍，有个场景可以使用：
 ```javascript
@@ -216,7 +244,7 @@ b = Direction.Up // ok
 
 - 联合枚举类型
 
-由于联合联合枚举，类型系统可以知道枚举里的值的集合。
+由于联合枚举，类型系统可以知道枚举里的值的集合。
 ```javascript
 enum Direction {
     Up,

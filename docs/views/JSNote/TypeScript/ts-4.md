@@ -11,7 +11,7 @@ TypeScript 的核心原则之一是对值所具有的结构进行类型检查,�
 ```javascript
 const getUserName = (user) => user.name
 ```
-此时会报错：<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/379592/1577981113339-cbe10c9c-0f3d-412e-a765-eca02122f323.png#align=left&display=inline&height=129&name=image.png&originHeight=258&originWidth=1214&size=55886&status=done&style=none&width=607)<br />我们必须用一种类型描述这个 `user` 参数，但是这个类型又不属于上一节介绍到的各种基本类型。此时，就需要用到interface：
+此时会报错：<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/379592/1577981113339-cbe10c9c-0f3d-412e-a765-eca02122f323.png#align=left&display=inline&height=129&name=image.png&originHeight=258&originWidth=1214&size=55886&status=done&style=none&width=607)<br />我们必须用一种类型描述这个 `user` 参数，但是这个类型又不属于各种基本类型。此时，就需要用到interface：
 ```javascript
 interface User {
     name: string
